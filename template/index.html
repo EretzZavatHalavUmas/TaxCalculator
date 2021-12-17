@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <title> Tax calculator </title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                ארץ זבת חלב, חלב ומס
+            </h1>
+            <h2>
+                ?מה זה מחשבון מיסים
+            <h2>
+            <h3>
+              מחשבון המיסים הוא כלי שעוזר לכם לחשב באופן פשוט וקל את סכום המיסים
+              החודשיים שאתם משלמים על מנת להעלות את המודעות הפיננסית שלכם
+            </h3>
+            <h4>
+                מחשבון מיסים
+            </h4>
+            <div class="row">
+                <div class="column">
+                <form action="{{url_for('success')}}" method="POST">
+                <label>
+                     :הכנס משכורת חודשית (ברוטו)
+                 <br></label>
+                <input title="Enter your salary here" placeholder="Enter your salary here" type="number" name="salary" min="0" max="100000" required><br>
+                <label>
+                     :הכנס מספר נקודות זכות
+                 <br></label>
+                <input title="Enter your nekudot zhut here" placeholder="Enter you nekudot zhut here" value="2.25"  type="number" step=0.01 name="nz" min="2.25" max="10" required><br>
+                <label>
+                     :הכנס שכירות חודשית
+                 <br></label>
+                <input title="Enter your rent here" placeholder="Enter you rent here" type="number" name="rent" min="0" max="1000000" required><br>
+                <label>
+                     :הכנס ארנונה חודשית
+                 <br></label>
+                <input title="Enter your arnona here" placeholder="Enter you arnona here" type="number" name="arnona" min="0" max="10000" required><br>
+                <label>
+                     :הכנס חשבון חשמל חודשי
+                 <br></label>
+                <input title="Enter your monthly electricity bill here" placeholder="Enter you monthly electricity bill here" type="number" name="elect" min="0" max="10000" required><br>
+                <label>
+                     :הכנס חשבון מים חודשי
+                 <br></label>
+                <input title="Enter your monthly water bill here" placeholder="Enter you monthly water bill here" type="number" name="water" min="0" max="10000" required><br>
+                <label>
+                     :הכנס הוצאות חודשיות
+                 <br></label>
+                <input title="Enter your expanses here" placeholder="Enter your expanses here" type="number" name="expanses" min="0" max="20000" required><br>
+                <label>
+                    :הכנס הוצאות דלק חודשיות
+                <br></label>
+                <input title="Enter your gasoline value:" placeholder="Enter your gasoline expanses here" type="number" name="gasoline" min="0" max="20000" required><br>
+                <label>
+                    :הכנס שווי רכב
+                <br></label>
+                <input title="Enter your car value here" placeholder="Enter your car value here" type="number" name="car" min="0" max="500000" required><br>
 
+                <p>
+                    חישובי המס הינם מקורבים, יתכנו אי דיוקים ויש לקחת זאת בחשבון
+                </p>
+
+                <p>
+                    הצעות לשיפור ניתן לשלוח למייל<br>
+                    eretzzavathalavumas@gmail.com
+                </p>
+
+                <button type="submit"> שלח </button>
+            </form>
+                </div>
+                <div class="column">
+                    <picture>
+                      <source srcset="/static/images/wallet3.jpg">
+                      <img src="/static/images/wallet3.jpg">
+                    </picture>
+                </div>
+            </div>
