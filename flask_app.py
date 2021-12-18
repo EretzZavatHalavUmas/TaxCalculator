@@ -51,6 +51,8 @@ class Data(db.Model):
         self.totalTax_ = totalTax_
         self.totalTaxPer_ = totalTaxPer_
 
+port = int(os.environ.get("PORT", 5000))
+        
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -139,7 +141,6 @@ def success():
 
 
 if __name__ == '__main__':
-    app.debug = True
-   # port = int(os.environ.get("PORT", 5000))
-   # app.run(host='0.0.0.0', port=port)
-   app.run()
+   app.debug = True
+   app.run(host='0.0.0.0', port=port)
+   #app.run()
