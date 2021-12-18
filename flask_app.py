@@ -49,7 +49,7 @@ class Data(db.Model):
         self.totalTax_ = totalTax_
         self.totalTaxPer_ = totalTaxPer_
 
-@app.route("/app")
+@app.route("/")
 def index():
     return render_template("index.html")
 
