@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from dateutil import tz
+# from dateutil import tz
+import tz
 from taxCalculator import *
 import os
 #from send_email import send_email
@@ -139,6 +140,6 @@ def success():
 
 if __name__ == '__main__':
     app.debug = True
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
-   # app.run()
+   # port = int(os.environ.get("PORT", 5000))
+   # app.run(host='0.0.0.0', port=port)
+   app.run()
