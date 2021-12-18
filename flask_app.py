@@ -11,12 +11,12 @@ import os
 #import urllib.request
 
 app=Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"]='mysql+mysqlconnector://eretzzavathalavu:MySQL12345@eretzzavathalavumas.mysql.pythonanywhere-services.com/eretzzavathalavu$inputs'
+app.config["SQLALCHEMY_DATABASE_URI"]='mysql+mysqlconnector://eretzzavathalavu:MySQL12345@eretzzavathalavumas.mysql.pythonanywhere-services.com/eretzzavathalavu$default'
 db=SQLAlchemy(app)
 
 
 class Data(db.Model):
-    __tablename__ = "data"
+    __tablename__ = "data2"
     id = db.Column(db.Integer, primary_key=True)
     date_ = db.Column(db.String(40))
     time_ = db.Column(db.String(40))
