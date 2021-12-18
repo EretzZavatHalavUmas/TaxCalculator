@@ -3,3 +3,4 @@ flask_sqlalchemy
 datetime
 python-dateutil
 mysql
+mysql.connector
