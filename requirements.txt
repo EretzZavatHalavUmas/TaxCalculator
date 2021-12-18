@@ -1,5 +1,4 @@
 flask
 flask_sqlalchemy
 datetime
-dateutil
 os
