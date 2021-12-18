@@ -1,4 +1,4 @@
 flask
 flask_sqlalchemy
 datetime
-dateutil
+from dateutil import tz
