@@ -16,7 +16,7 @@ db=SQLAlchemy(app)
 
 
 class Data(db.Model):
-    __tablename__ = "data2"
+    __tablename__ = "data"
     id = db.Column(db.Integer, primary_key=True)
     date_ = db.Column(db.String(40))
     time_ = db.Column(db.String(40))
