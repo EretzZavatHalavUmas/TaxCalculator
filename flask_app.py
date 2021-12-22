@@ -8,6 +8,7 @@ import os
 #from sqlalchemy.sql import func
 #from requests import get
 #import urllib.request
+from send_email import send_email
 
 app=Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]='mysql+mysqlconnector://eretzzavathalavu:MySQL12345@eretzzavathalavumas.mysql.pythonanywhere-services.com/eretzzavathalavu$default'
@@ -96,7 +97,7 @@ def success():
         #average_height = db.session.query(func.avg(Data.height_)).scalar()
         #average_height = round(average_height,0)
         #count = db.session.query(Data.height_).count()
-        #send_email(email, height, average_height, count)
+        if content: send_email(content)
 
         return render_template("success.html",
                                mhText="mas haknasa is %s ILS " % round(mh),
