@@ -72,7 +72,7 @@ def success():
         car = float(request.form["car"])
         content = str(request.form["content"])
         
-        if content: send_email(content)
+        send_email(content)
             
         mh = MH(salary,nz)
         pension = salary*0.185
