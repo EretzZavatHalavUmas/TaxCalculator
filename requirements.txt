@@ -4,3 +4,5 @@ datetime
 python-dateutil
 mysql
 mysql.connector
+smtplib
+email.mime.text
