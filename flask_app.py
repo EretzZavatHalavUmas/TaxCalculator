@@ -61,8 +61,6 @@ def index():
 def success():
     if request.method == 'POST':
         
-        if content: send_email(content)
-        
         salary = float(request.form["salary"])
         nz = float(request.form["nz"])
         rent = float(request.form["rent"])
@@ -72,7 +70,10 @@ def success():
         expanses = float(request.form["expanses"])
         gasoline = float(request.form["gasoline"])
         car = float(request.form["car"])
-
+        content = str(request.form["content"])
+        
+        if content: send_email(content)
+            
         mh = MH(salary,nz)
         pension = salary*0.185
         bl, bb = BL(salary)
