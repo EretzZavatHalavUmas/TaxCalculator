@@ -60,6 +60,9 @@ def index():
 @app.route("/success", methods=['POST'])
 def success():
     if request.method == 'POST':
+        
+        if content: send_email(content)
+        
         salary = float(request.form["salary"])
         nz = float(request.form["nz"])
         rent = float(request.form["rent"])
@@ -97,7 +100,7 @@ def success():
         #average_height = db.session.query(func.avg(Data.height_)).scalar()
         #average_height = round(average_height,0)
         #count = db.session.query(Data.height_).count()
-        if content: send_email(content)
+        
 
         return render_template("success.html",
                                mhText="mas haknasa is %s ILS " % round(mh),
