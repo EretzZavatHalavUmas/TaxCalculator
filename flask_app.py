@@ -11,7 +11,7 @@ import os
 from send_email import send_email
 
 app=Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"]='mysql://Ron:MREngineering1$@http://data2.chto6pl4dabw.us-east-2.rds.amazonaws.com:3306/data2'
+app.config["SQLALCHEMY_DATABASE_URI"]='mysql://Ron:MREngineering1$@http://data2.chto6pl4dabw.us-east-2.rds.amazonaws.com:3306/data2inputs'
 db=SQLAlchemy(app)
 
 
