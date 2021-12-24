@@ -4,3 +4,4 @@ datetime
 python-dateutil
 mysql
 mysql.connector
+pymysql
