@@ -32,7 +32,7 @@ class Data(db.Model):
     totalDirectTaxPer_ = db.Column(db.Float())
     totalTax_ = db.Column(db.Float())
     totalTaxPer_ = db.Column(db.Float())
-    content_ = db.Column(db.varchar())
+    content_ = db.Column(db.Text())
 
     def __init__(self, date_, time_, salary_, nz_, rent_, arnona_, expanses_, gasoline_, car_, totalDirectTax_, totalDirectTaxPer_,  totalTax_, totalTaxPer_, content_):
         self.date_ = date_
