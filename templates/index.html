@@ -1,74 +1,103 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <title> Tax calculator </title>
+<!doctype html>
+
+<html lang = "he">
+    <title> r&d </title>
     <head>
-        <link href="../static/main.css" rel="stylesheet">
+ <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
-            <h1>
-                ארץ זבת חלב, חלב ומס
-            </h1>
-            <h2>
-                ?מה זה מחשבון מיסים
-            <h2>
+                <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">ארץ זבת חלב, חלב ומס</span>
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item order-last"><a href="#" class="nav-link disabled" aria-current="page">  בית </a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">  מחשבון מיסים </a></li>
+                <li class="nav-item order-first"><a href="#" class="nav-link"> אודות </a></li>
+                <li class="nav-item order-first"><a href="#" class="nav-link disabled" > צור-קשר </a></li>
+              </ul>
+            </header>
+        </div>
+        <div class="container text-end">
             <h3>
-              מחשבון המיסים הוא כלי שעוזר לכם לחשב באופן פשוט וקל את סכום המיסים
-              החודשיים שאתם משלמים על מנת להעלות את המודעות הפיננסית שלכם
+                ?מה זה מחשבון מיסים
             </h3>
-            <h4>
+            <p>
+              .מחשבון המיסים הוא כלי שעוזר לכם לחשב באופן פשוט וקל את סכום המיסים החודשיים שאתם משלמים על מנת להעלות את המודעות הפיננסית שלכם
+            </p>
+
+
+            <div class="alert alert-primary" style="height:60px; color:white; background-color: #0f4ca9" role="alert">
+                <h4>
                 מחשבון מיסים
-            </h4>
+                </h4>
+            </div>
+
             <div class="row">
-                <div class="column">
-                <form action="{{url_for('success')}}" method="POST">
-                <label>
-                     :הכנס משכורת חודשית (ברוטו)
-                 <br></label>
-                <input title="Enter your salary here" placeholder="Enter your salary here" type="number" value="10000" name="salary" min="0" max="100000" required><br>
-                <label>
-                     :הכנס מספר נקודות זכות
-                 <br></label>
-                <input title="Enter your nekudot zhut here" placeholder="Enter you nekudot zhut here" value="2.25"  type="number" step=0.01 name="nz" min="2.25" max="10" required><br>
-                <label>
-                     :הכנס שכירות חודשית
-                 <br></label>
-                <input title="Enter your rent here" placeholder="Enter you rent here" type="number" name="rent" value="3000" min="0" max="1000000" required><br>
-                <label>
-                     :הכנס ארנונה חודשית
-                 <br></label>
-                <input title="Enter your arnona here" placeholder="Enter you arnona here" type="number" value="500" name="arnona" min="0" max="10000" required><br>
-                <label>
-                     :הכנס הוצאות חודשיות (כולל חשמל ומים)
-                 <br></label>
-                <input title="Enter your expanses here" placeholder="Enter your expanses here" type="number" name="expanses" min="0" value="3400" max="20000" required><br>
-                <label>
-                    :הכנס הוצאות דלק חודשיות
-                <br></label>
-                <input title="Enter your gasoline value:" placeholder="Enter your gasoline expanses here" type="number" name="gasoline" min="0" value="1000" max="20000" required><br>
-                <label>
-                    :הכנס שווי רכב
-                <br></label>
-                <input title="Enter your car value here" placeholder="Enter your car value here" type="number" name="car" min="0" value="100000" max="500000" required><br>
-
-                <p>
-                    חישובי המס הינם מקורבים, יתכנו אי דיוקים ויש לקחת זאת בחשבון
-                </p>
-
-                <p>
-                    ?הצעות לשיפור<br>
-                    
-                    <textarea title="הצעות" placeholder="הצעות" type="text" name="content" rows="5" cols="60" maxlength="1000"></textarea><br>
-
-                </p>
-
-                <button type="submit"> שלח </button>
-            </form>
-                </div>
-                <div class="column">
+                <div class="col">
                     <picture>
                       <source srcset="/static/images/wallet3.jpg">
                       <img src="/static/images/wallet3.jpg">
                     </picture>
                 </div>
+                <div class="col">
+                <form action="{{url_for('success')}}" method="POST">
+
+                    <div class="form-floating mb-2">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="10000000" id="salary" placeholder="" required>
+                      <label for="salary" style="right:5%;">הכנס משכורת חודשית ברוטו</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="2.25" max="15.00" step=0.01 id="nz" value="2.25" required>
+                      <label for="nz" style="right:5%;">הכנס מס' נקודות זכות</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="100000" id="rent" placeholder="" required>
+                      <label for="rent" style="right:5%;">הכנס שכירות חודשית</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="100000" id="arnona" placeholder="" required>
+                      <label for="arnona" style="right:5%;">הכנס ארנונה חודשית</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="100000" id="expanses" placeholder="" required>
+                      <label for="expanses" style="right:5%;"> הכנס הוצאות חודשיות (כולל חשמל ומים)</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="10000000" id="car" placeholder="" required>
+                      <label for="car" style="right:5%;"> הכנס שווי רכב</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" style="text-align:end; height:50px" min="0" max="1000000" id="gasoline" placeholder="" required>
+                      <label for="gasoline" style="right:5%;"> הכנס הוצאות דלק חודשיות</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <textarea class="form-control" style="text-align:end;height: 100px;resize:none" maxlength="200" id="content" placeholder="" ></textarea>
+                      <label for="content" style="right:5%;"> ?הצעות לשיפור</label>
+                    </div>
+
+                    <p>
+                    <b> חישובי המס הינם מקורבים, יתכנו אי דיוקים ויש לקחת זאת בחשבון</b>
+                    </p>
+
+                   <!--  <button type="submit"> שלח </button> -->
+                    <input class="btn btn-primary btn-lg" type="submit" value="שלח">
+                </form>
+                </div>
             </div>
+        </div>
+    </body>
+</html>
