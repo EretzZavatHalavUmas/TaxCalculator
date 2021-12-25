@@ -4,12 +4,12 @@ from datetime import datetime
 from dateutil import tz
 from taxCalculator import *
 import os
-#from send_email import send_email
+from send_email import send_email
+import pymysql
 #from sqlalchemy.sql import func
 #from requests import get
 #import urllib.request
-from send_email import send_email
-import pymysql
+
 
 app=Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]='mysql://Ron:MREngineering1$@data2.chto6pl4dabw.us-east-2.rds.amazonaws.com:3306/data2inputs'
@@ -67,7 +67,7 @@ def success():
         car = float(request.form["car"])
         content = str(request.form["content"])
         
-        #send_email(content)
+        send_email(content)
             
         mh = MH(salary,nz)
         pension = salary*0.185
