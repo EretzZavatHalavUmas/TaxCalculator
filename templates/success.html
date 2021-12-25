@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <title> Tax calculator </title>
-    <head>
+{%extends "base.html" %}
+    {%block head%}
         <style>
             .divScroll {
             background-color:#00FFFF;
@@ -43,9 +41,9 @@
 
           }
         </script>
+	{% endblock %}
 
-    </head>
-    <body>
+    {%block content%}
         <div class="container2">
             <h1>
                 ארץ זבת חלב, חלב ומס
@@ -98,5 +96,5 @@
 
         </div>
 
-    </body>
-</html>
+    {% endblock %}
+
