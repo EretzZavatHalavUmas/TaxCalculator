@@ -273,12 +273,12 @@ textarea {
   resize: none;
 }
 
-#nav_bar .active {
+#nav nav-pills .active {
     color:            #F8F8F8;
     background-color: #4f81bd;
 }
 
-.navbar-nav>.active>a {
+.nav nav-pills>.active>a {
     background-color: #C0C0C0;
     color: green;
 }
