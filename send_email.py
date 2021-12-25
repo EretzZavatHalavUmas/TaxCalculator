@@ -2,8 +2,8 @@ from email.mime.text import MIMEText
 import smtplib
 
 def send_email(content):
-    from_email = "1000dadaytest@gmail.com"
-    from_password = "dadaytest1000"
+    from_email = "EretzZavatHalavUmas@gmail.com"
+    from_password = "MREngineering$"
     to_email = "EretzZavatHalavUmas@gmail.com"
 
     subject = "New comment on your website!"
