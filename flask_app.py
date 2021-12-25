@@ -25,8 +25,6 @@ class Data(db.Model):
     nz_ = db.Column(db.Float())
     rent_ = db.Column(db.Integer())
     arnona_ = db.Column(db.Integer())
-    elect_ = db.Column(db.Integer())
-    water_ = db.Column(db.Integer())
     expanses_ = db.Column(db.Integer())
     gasoline_ = db.Column(db.Integer())
     car_ = db.Column(db.Integer())
@@ -35,15 +33,13 @@ class Data(db.Model):
     totalTax_ = db.Column(db.Float())
     totalTaxPer_ = db.Column(db.Float())
 
-    def __init__(self, date_, time_, salary_, nz_, rent_, arnona_, elect_, water_, expanses_, gasoline_, car_, totalDirectTax_, totalDirectTaxPer_,  totalTax_, totalTaxPer_):
+    def __init__(self, date_, time_, salary_, nz_, rent_, arnona_, expanses_, gasoline_, car_, totalDirectTax_, totalDirectTaxPer_,  totalTax_, totalTaxPer_):
         self.date_ = date_
         self.time_ = time_
         self.salary_ = salary_
         self.nz_ = nz_
         self.rent_ = rent_
         self.arnona_ = arnona_
-        self.elect_ = elect_
-        self.water_ = water_
         self.expanses_ = expanses_
         self.gasoline_ = gasoline_
         self.car_ = car_
@@ -66,8 +62,6 @@ def success():
         nz = float(request.form["nz"])
         rent = float(request.form["rent"])
         arnona = float(request.form["arnona"])
-        elect = float(request.form["elect"])
-        water = float(request.form["water"])
         expanses = float(request.form["expanses"])
         gasoline = float(request.form["gasoline"])
         car = float(request.form["car"])
@@ -78,7 +72,7 @@ def success():
         mh = MH(salary,nz)
         pension = salary*0.185
         bl, bb = BL(salary)
-        vat = VAT(expanses,gasoline,elect,water)
+        vat = VAT(expanses,gasoline)
         gasTax = gasolineTax(gasoline)
         carTax = carTaxCalc(car)
         totalExp = (expanses+elect+water-vat)+(gasoline-gasTax) #calculate car monthly expense
@@ -96,7 +90,7 @@ def success():
         now = now.astimezone(to_zone)
         date = now.strftime("%d/%m/%Y")
         time = now.strftime("%H:%M:%S")
-        data = Data(date, time, salary, nz, rent, arnona, elect, water, expanses, gasoline, car, totalDirectTax, totalDirectTaxPer, totalTax, totalTaxPer)
+        data = Data(date, time, salary, nz, rent, arnona, expanses, gasoline, car, totalDirectTax, totalDirectTaxPer, totalTax, totalTaxPer)
         db.session.add(data)
         db.session.commit()
         #average_height = db.session.query(func.avg(Data.height_)).scalar()
