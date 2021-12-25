@@ -35,9 +35,9 @@ def BL(salary):
         return BLtemp, BBtemp
 
 
-def VAT(expanses,gasoline,elect,water):
+def VAT(expanses,gasoline):
     vat = 0.17
-    return vat*(expanses+gasoline+elect+water)
+    return vat*(expanses+gasoline)
 
 
 def gasolineTax(gasoline):
