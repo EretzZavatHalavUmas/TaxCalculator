@@ -268,3 +268,7 @@ img{
     font-family: "Rubik", sans-serif;
     color: #000;
 }
+
+textarea {
+  resize: none;
+}
