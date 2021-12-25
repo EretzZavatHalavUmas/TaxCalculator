@@ -75,7 +75,7 @@ def success():
         vat = VAT(expanses,gasoline)
         gasTax = gasolineTax(gasoline)
         carTax = carTaxCalc(car)
-        totalExp = (expanses+elect+water-vat)+(gasoline-gasTax) #calculate car monthly expense
+        totalExp = (expanses-vat)+(gasoline-gasTax) #calculate car monthly expense
         totalExpanseTax = vat+gasTax+carTax
         totalDirectTax = mh+bl+bb
         netSalary = salary - totalDirectTax - 0.06*salary
