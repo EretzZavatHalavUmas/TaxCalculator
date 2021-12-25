@@ -32,8 +32,9 @@ class Data(db.Model):
     totalDirectTaxPer_ = db.Column(db.Float())
     totalTax_ = db.Column(db.Float())
     totalTaxPer_ = db.Column(db.Float())
+    content_ = db.Column(db.String())
 
-    def __init__(self, date_, time_, salary_, nz_, rent_, arnona_, expanses_, gasoline_, car_, totalDirectTax_, totalDirectTaxPer_,  totalTax_, totalTaxPer_):
+    def __init__(self, date_, time_, salary_, nz_, rent_, arnona_, expanses_, gasoline_, car_, totalDirectTax_, totalDirectTaxPer_,  totalTax_, totalTaxPer_, content_):
         self.date_ = date_
         self.time_ = time_
         self.salary_ = salary_
@@ -47,6 +48,7 @@ class Data(db.Model):
         self.totalDirectTax_ = totalDirectTax_
         self.totalTax_ = totalTax_
         self.totalTaxPer_ = totalTaxPer_
+        self.content_ = content_
 
 port = int(os.environ.get("PORT", 5000))
         
@@ -67,7 +69,7 @@ def success():
         car = float(request.form["car"])
         content = str(request.form["content"])
         
-        send_email(content)
+        #send_email(content)
             
         mh = MH(salary,nz)
         pension = salary*0.185
@@ -90,7 +92,7 @@ def success():
         now = now.astimezone(to_zone)
         date = now.strftime("%d/%m/%Y")
         time = now.strftime("%H:%M:%S")
-        data = Data(date, time, salary, nz, rent, arnona, expanses, gasoline, car, totalDirectTax, totalDirectTaxPer, totalTax, totalTaxPer)
+        data = Data(date, time, salary, nz, rent, arnona, expanses, gasoline, car, totalDirectTax, totalDirectTaxPer, totalTax, totalTaxPer, content)
         db.session.add(data)
         db.session.commit()
         #average_height = db.session.query(func.avg(Data.height_)).scalar()
