@@ -52,9 +52,9 @@ class Data(db.Model):
 
 port = int(os.environ.get("PORT", 5000))
         
-@app.route("/")
+@app.route("/calc")
 def index():
-    return render_template("index.html")
+    return render_template("calc.html")
 
 @app.route("/success", methods=['POST'])
 def success():
@@ -146,7 +146,7 @@ def success():
 def about():
     return render_template("about.html")
 
-@app.route("/home")
+@app.route("/")
 def home():
     return render_template("home.html")
 
