@@ -164,9 +164,12 @@ img{
     width: 10px;
     height: auto;
     float: left;
-    */
+   
     width: 50%;
     height: auto;
+     */
+    height: fit-content;
+    width: fit-content;
     object-fit: cover;
 }
 
