@@ -107,11 +107,11 @@ def success():
                                vatText="expanses Tax is %s ILS " % round(vat),
                                gasolineText="gas Tax is %s ILS " % round(gasTax),
                                carText="car Tax is %s ILS" % round(carTax),
-                               totalDirectTaxText = "סך כל המיסים הישירים - ₪ %s"
+                               totalDirectTaxText = "המיסים הישירים - ₪ %s "
                                % round(totalDirectTax),
                                totalDirectTaxPerText = "שמהווים כ-%% %s מההכנסה"
                                % round(totalDirectTaxPer),
-                               totalTaxText = "סך כל המיסים - ₪ %s"
+                               totalTaxText = "סך כל המיסים - ₪ %s "
                                % round(totalTax),
                                totalTaxPerText = "שמהווים כ-%% %s מההכנסה"
                                % round(totalTaxPer),
