@@ -46,18 +46,12 @@
     {%block content%}
         <div class="container2">
             <div class="float-container">
-		 
-		    <div class="message">
-                        {{totalDirectTaxText | safe}}
-                        <br>
-                        {{totalDirectTaxPerText | safe}}
-                    </div>
-		  
-		     <div class="message">
-                        {{totalTaxText | safe}}
-                        <br>
-                        {{totalTaxPerText | safe}}
-                    </div>
+		    
+		 <h2 style="font-weight: bold">
+		    <div class="message">{{totalDirectTaxText | safe}}{{totalDirectTaxPerText | safe}}</div>
+		    <br>
+		    <div class="message">{{totalTaxText | safe}}{{totalTaxPerText | safe}}</div>
+		  </h2> 
 		    
 	         <hr style="width:100%;text-align:left;margin-left:0;background-color: black">
 		    
