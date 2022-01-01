@@ -46,17 +46,28 @@
     {%block content%}
         <div class="container2">
             <div class="float-container">
+		 
+		    <div class="message">
+                        {{totalDirectTaxText | safe}}
+                        <br>
+                        {{totalDirectTaxPerText | safe}}
+                    </div>
+		  
+		     <div class="message">
+                        {{totalTaxText | safe}}
+                        <br>
+                        {{totalTaxPerText | safe}}
+                    </div>
+		    
+	         <hr style="width:100%;text-align:left;margin-left:0;background-color: black">
+		    
                 <h2>
                     פילוח חודשי - מיסים ישירים
                 </h2>
                 <h3>
                     בגרף זה מוצג הפילוח של המיסים הישירים - מס הכנסה, ביטוח לאומי וביטוח בריאות
                 <br>
-                    <div class="message">
-                        {{totalDirectTaxText | safe}}
-                        <br>
-                        {{totalDirectTaxPerText | safe}}
-                    </div>
+
                 </h3>
                 <div class="float-child" id="piechart"></div>
                 <p>
@@ -69,13 +80,9 @@
                     פילוח חודשי - מיסים ישירים ועקיפים
                 </h2>
                 <h3>
-                    בגרף זה מוצג הפילוח של המיסים הישרים והעקיפים - כולל מע"מ, מס בלו ומס על רכב
+                    בגרף זה מוצג הפילוח של המיסים הישרים והעקיפים - כולל מע"מ, מס בלו, מס על רכב, אגרת רישוי וארנונה
                 <br>
-                    <div class="message">
-                        {{totalTaxText | safe}}
-                        <br>
-                        {{totalTaxPerText | safe}}
-                    </div>
+
                 </h3>
                 <div class="float-child" id="piechart2"></div>
 
