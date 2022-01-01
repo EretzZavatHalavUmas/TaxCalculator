@@ -78,7 +78,7 @@ def success():
         gasTax = gasolineTax(gasoline)
         carTax = carTaxCalc(car)
         totalExp = (expanses-vat)+(gasoline-gasTax) #calculate car monthly expense
-        totalExpanseTax = vat+gasTax+carTax
+        totalExpanseTax = vat+gasTax+carTax+arnona
         totalDirectTax = mh+bl+bb
         netSalary = salary - totalDirectTax - 0.06*salary
         totalTax = totalDirectTax + totalExpanseTax
@@ -129,7 +129,8 @@ def success():
                                       ['ביטוח בריאות',  round(bb)],
                                       ['מע"מ', round(vat)],
                                       ['מס בלו',    round(gasTax)],
-                                      ['מס על רכב',    round(carTax)]
+                                      ['מס על רכב',    round(carTax)],
+                                      ['ארנונה',    round(arnona)]
                                     ],
                                DATA3 = [['Category', 'ILS'],
                                       ['מס הכנסה',     round(mh)],
