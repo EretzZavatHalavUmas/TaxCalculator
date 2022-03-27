@@ -19,11 +19,22 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
     #hero .hero-content {
         padding-top: 60px;
     }
 
+    #contact-form input, #contact-form textarea {
+    width: 65%;
+    }
+
+    #contact-form{
+        height: auto;
+        padding: 0px;
+    }
+    #hero{
+        height: 600px;
+    }
     #hero .hero-content h1 {
         font-size: 40px;
         line-height: 120%;
@@ -37,6 +48,12 @@
 }
 
 @media (max-width: 680px) {
+    .float-child {
+        width: 450px;
+        padding: 10px;
+        margin: auto;
+    }
+
     #home-experience {
         height: 350px;
     }
@@ -48,24 +65,8 @@
         float: none;
         width: unset;
     }
-}
 
-@media (max-width: 1050px) {
-    #features .box {
-        float: none;
-        width: unset;
-    }
-
-    #about-info {
-        height: unset;
-    }
-
-    #about-info .info-left {
-        padding-bottom: 20px;
-    }
-    #about-info .info-left,
-    #about-info .info-right {
-        float: none;
-        width: unset;
+    #Under-construction {
+    height: 500px;
     }
 }
