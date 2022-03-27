@@ -246,11 +246,20 @@ h4 {
 }
 
 /* Tax-calc image*/
-#contact-form{
+.contact-form{
     /*margin-top: 10px;*/
      /* background: url('../img/wallet.jpg') no-repeat center center / cover;*/
-    height: 800px;
+    /*height: 800px;*/
     padding: 0px;
+    margin-bottom: 20px;
+}
+
+.contact-box{
+    text-align:end;
+    height: 100px;
+    width: 50%;
+    resize:none;
+    margin-bottom: 20px;
 }
 /* form */
 form {
@@ -302,7 +311,12 @@ form {
 }
 
 #contact-form textarea {
-    height: 180px;
+    height: 10px;
+    text-align:end;
+    width: 50%;
+    resize:none;
+    border-radius: 10px;
+    border-size: red;
 }
 
 #contact-form input:focus,
