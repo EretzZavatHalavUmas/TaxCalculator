@@ -25,34 +25,34 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+          function drawChart() {
 
-        var data = google.visualization.arrayToDataTable([['Category', 'ILS'], ['מס הכנסה', 0], ['ביטוח לאומי', 6], ['ביטוח בריאות', 46]]);
-        var data2 = google.visualization.arrayToDataTable([['Category', 'ILS'], ['מס הכנסה', 0], ['ביטוח לאומי', 6], ['ביטוח בריאות', 46], ['מע"מ', 510], ['מס בלו', 750], ['מס על רכב', 105], ['ארנונה', 1500]]);
-        <!-- var data3 = google.visualization.arrayToDataTable([['Category', 'ILS'], ['מס הכנסה', 0], ['ביטוח לאומי', 6], ['ביטוח בריאות', 46], ['מע"מ', 510], ['מס בלו', 750], ['מס על רכב', 105]]); -->
-
-
-        var options = {'position':'center', 'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}};
-        var options2 = {'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}};
-        <!-- var options3 = {'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}}; -->
+            var data = google.visualization.arrayToDataTable({{DATA | safe}});
+            var data2 = google.visualization.arrayToDataTable({{DATA2 | safe}});
+            <!-- var data3 = google.visualization.arrayToDataTable({{DATA3 | safe}}); -->
 
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
-        <!-- var chart3 = new google.visualization.PieChart(document.getElementById('piechart3')); -->
+            var options = {'position':'center', 'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}};
+            var options2 = {'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}};
+            <!-- var options3 = {'width':800, 'height':600, 'legend':'bottom', 'chartArea': {'width': '100%', 'height': '90%'}}; -->
 
 
-        chart.draw(data, options);
-        chart2.draw(data2, options2);
-        <!-- chart3.draw(data3, options3); -->
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+            <!-- var chart3 = new google.visualization.PieChart(document.getElementById('piechart3')); -->
 
-      }
-    </script>
+
+            chart.draw(data, options);
+            chart2.draw(data2, options2);
+            <!-- chart3.draw(data3, options3); -->
+
+          }
+        </script>
 
 </head>
 
