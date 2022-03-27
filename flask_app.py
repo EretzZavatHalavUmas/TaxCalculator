@@ -11,7 +11,7 @@ import pymysql
 #import urllib.request
 
 
-app =  Flask(__name__, template_folder='.')
+app =  Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]='mysql://Ron:MREngineering1$@data2.chto6pl4dabw.us-east-2.rds.amazonaws.com:3306/data2inputs'
 db=SQLAlchemy(app)
 
