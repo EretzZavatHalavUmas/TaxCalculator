@@ -152,8 +152,18 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == 'POST':
+        content = (request.form["content"])
+        print(content)
+        print(type(content))
+        if(send_email(content)):
+            flash('Email sent successfully!')
+            return render_template('contact.html')
+        else:
+            flash("Error, your email wasn't delivered !")
+            return render_template('contact.html')
     return render_template("contact.html")
 
 
