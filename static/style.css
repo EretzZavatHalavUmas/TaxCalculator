@@ -131,7 +131,7 @@ h2 {
 
 /* Hero Image */
 #hero {
-    background: url('../img/Money.jpg') no-repeat center 35% / cover;
+    background: url('/static/images/Money.jpg') no-repeat center 35% / cover;
     height: 800px;
 }
 
@@ -160,7 +160,7 @@ h2 {
 #home-experience .experience-img {
     float: left;
     width: 50%;
-    background: url('../img/food.jpg') no-repeat center center / cover;
+    background: url('/static/images/food.jpg') no-repeat center center / cover;
     min-height: 100%;
 }
 #home-experience .experience-content {
@@ -179,7 +179,7 @@ h2 {
 /* Under construction image */
 #Under-construction {
     /*margin-top: 10px;*/
-    background: url('../img/page-under-construction.jpg') no-repeat center center / cover;
+    background: url('/static/images/page-under-construction.jpg') no-repeat center center / cover;
     height: 800px;
     padding: 0px;
 }
