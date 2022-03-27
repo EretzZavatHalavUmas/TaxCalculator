@@ -51,7 +51,7 @@ class Data(db.Model):
 port = int(os.environ.get("PORT", 5000))
         
 @app.route("/calc")
-def index():
+def calc():
     return render_template("calc.html")
 
 @app.route("/success", methods=['POST'])
@@ -141,7 +141,7 @@ def about():
     return render_template("about.html")
 
 @app.route("/")
-def home():
+def index():
     return render_template("index.html")
 
 @app.route("/contact")
