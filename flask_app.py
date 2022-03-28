@@ -156,7 +156,7 @@ def index():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == 'POST':
-        content = (request.form["content"])
+        content = (request.form["contact-text"])
         print(content)
         print(type(content))
         if(send_email(content)):
