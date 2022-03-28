@@ -53,27 +53,27 @@
 
         <!-- option for second person-->
         <div class="form-group">
-            <label for="checkbox1" style="display:inline">סמן כדי להכניס אדם נוסף</label>
+            <label for="checkbox1" style="display:inline">סמן כדי להכניס משכורת נוספת</label>
             <input type="checkbox" id="checkbox1" style="width:20px; height:20px"
-                   onclick="document.getElementById('salary2').disabled=!this.checked;
-                            document.getElementById('nz2').disabled=!this.checked;
-                            "/>
+                   onclick="myFunction()"/>
         </div>
 
         <!-- Salary 2-->
-        <div class="form-group" id="hidden">
-          <label for="salary2">:(ברוטו) הכנס משכורת חודשית שנייה</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות">
-            ?
-          </button>
-          <input id="salary2" name="salary2" type="number"  class="form-control" min="0" max="150000" placeholder="" required disabled>
-        </div>
+        <div id="hidden" style="display:none">
+            <div class="form-group">
+              <label for="salary2">:(ברוטו) הכנס משכורת חודשית שנייה</label>
+              <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות">
+                ?
+              </button>
+              <input id="salary2" name="salary2" type="number"  class="form-control" min="0" max="150000" placeholder="" required>
+            </div>
 
-        <!-- Nekudot zhut 2-->
-        <div class="form-group" id="hidden">
-          <label for="nz2">:הכנס מס' נקודות זכות (אדם שני)</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות"> ? </button>
-          <input id="nz2" name="nz2" type="number" class="form-control" min="2.25" max="15.00" step=0.25 placeholder="" value="2.25" required disabled>
+            <!-- Nekudot zhut 2-->
+            <div class="form-group">
+              <label for="nz2">:הכנס מס' נקודות זכות (אדם שני)</label>
+              <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות"> ? </button>
+              <input id="nz2" name="nz2" type="number" class="form-control" min="2.25" max="15.00" step=0.25 placeholder="" value="2.25" required>
+            </div>
         </div>
 
         <!-- Rent -->
@@ -116,7 +116,7 @@
         </p>
 
         <!-- <button type="submit" class="btn">חשב</button> -->
-        <input class="btn" type="submit" value="חשב">
+        <input class="btn" type="submit" style="text-align: center" value="חשב">
       </form>
     </div>
   </section>
@@ -127,6 +127,17 @@
         Copyright &copy; 2022, Eretz zavat halav umas
       </div>
   </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

@@ -15,9 +15,8 @@
 
 @media (max-width: 550px) {
     #navbar ul li a {
-        padding: 5px 5px;
+        padding: 5px 10px;
     }
-
 }
 
 @media (max-width: 650px) {
@@ -31,15 +30,17 @@
 
     #contact-text {
     width: 80%;
-}
+    }
 
     #contact-form{
         height: auto;
         padding: 0px;
     }
+
     #hero{
         height: 600px;
     }
+
     #hero .hero-content h1 {
         font-size: 40px;
         line-height: 120%;
@@ -62,6 +63,7 @@
     #home-experience {
         height: 350px;
     }
+
     #home-experience .experience-img {
         display: none;
     }
