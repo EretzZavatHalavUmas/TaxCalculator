@@ -115,6 +115,24 @@
           </button>
           <input id="car" name="car" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
+          
+        <!-- option for second car-->
+        <div class="form-group">
+            <label for="checkbox2" style="display:inline">סמן כדי להכניס רכב נוסף</label>
+            <input type="checkbox" id="checkbox2" style="width:20px; height:20px"
+                   onclick="myFunction2()"/>
+        </div>
+
+        <!-- car 2-->
+        <div id="hidden2" style="display:none">
+            <div class="form-group">
+              <label for="car2">:(ביום הקניה) הכנס שווי רכב שני</label>
+              <button type="button" class="tooltip-btn">?
+                <span class="tooltiptext">משווי הרכב נגזרים מע''מ ומס רכב</span>
+              </button>
+              <input id="car2" name="car2" type="number"  class="form-control" min="0" max="150000" placeholder="" required disabled>
+            </div>
+        </div>
         
         <!-- Gasoline   -->
         <div class="form-group">
@@ -156,6 +174,21 @@ function myFunction() {
     x.style.display = "none";
     y.disabled = true;
     z.disabled = true;
+  }
+}
+</script>
+    
+<script>
+function myFunction2() {
+  var x = document.getElementById("hidden2");
+  var y = document.getElementById('car2');
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.disabled = false;
+  } else {
+    x.style.display = "none";
+    y.disabled = true;
   }
 }
 </script>
