@@ -236,15 +236,6 @@ h4 {
     padding: 1px;
 }
 
-.tooltip-btn{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border-color: var(--primary);
-    text-align: center;
-    cursor: help;
-}
-
 /* Tax-calc image*/
 .contact-form{
     /*margin-top: 10px;*/
@@ -349,4 +340,61 @@ input:disabled {
     width: 60%;
     padding: 10px;
     margin: auto;
+}
+
+/*tooltip*/
+
+.tooltip-btn{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: var(--primary);
+    text-align: center;
+    cursor: help;
+}
+
+/* Tooltip container */
+.tooltip-btn {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-btn .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 5px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  right: 150%;
+  margin-right: 10px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip-btn .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--primary) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip-btn:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

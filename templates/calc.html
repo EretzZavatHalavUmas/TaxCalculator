@@ -38,8 +38,8 @@
         <!-- Salary -->
         <div class="form-group">
           <label for="salary">:(ברוטו) הכנס משכורת חודשית </label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות">
-            ?
+          <button type="button" class="tooltip-btn">?
+              <span class="tooltiptext">מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות</span>
           </button>
           <input id="salary" name="salary" type="number"  class="form-control" min="0" max="150000" placeholder="" required>
         </div>
@@ -47,7 +47,9 @@
         <!-- Nekudot zhut -->
         <div class="form-group">
           <label for="nz">:הכנס מס' נקודות זכות</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות"> ? </button>
+          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top"> ?
+            <span class="tooltiptext">לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות</span>
+          </button>
           <input id="nz" name="nz" type="number" class="form-control" min="2.25" max="15.00" step=0.25 placeholder="" value="2.25" required>
         </div>
 
@@ -62,8 +64,8 @@
         <div id="hidden" style="display:none">
             <div class="form-group">
               <label for="salary2">:(ברוטו) הכנס משכורת חודשית שנייה</label>
-              <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות">
-                ?
+              <button type="button" class="tooltip-btn">?
+                <span class="tooltiptext">מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות</span>
               </button>
               <input id="salary2" name="salary2" type="number"  class="form-control" min="0" max="150000" placeholder="" required disabled>
             </div>
@@ -71,7 +73,9 @@
             <!-- Nekudot zhut 2-->
             <div class="form-group">
               <label for="nz2">:הכנס מס' נקודות זכות (אדם שני)</label>
-              <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות"> ? </button>
+              <button type="button" class="tooltip-btn"> ?
+                <span class="tooltiptext">לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות</span>
+              </button>
               <input id="nz2" name="nz2" type="number" class="form-control" min="2.25" max="15.00" step=0.25 placeholder="" value="2.25" required disabled>
             </div>
         </div>
@@ -79,35 +83,45 @@
         <!-- Rent -->
         <div class="form-group">
           <label for="rent">: הכנס שכירות חודשית</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות"> ? </button>
+          <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">???</span>
+          </button>
           <input id="rent" name="rent" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
 
         <!-- Arnona -->
         <div class="form-group">
           <label for="arnona">:הכנס ארנונה דו-חודשית</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="הארנונה החודשית מחושבת כמיסים עירוניים"> ? </button>
+          <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">הארנונה החודשית מחושבת כמיסים עירוניים</span>
+          </button>
           <input id="arnona" name="arnona" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
 
         <!-- Expanses  -->
         <div class="form-group">
           <label for="expanses">:הכנס הוצאות חודשיות (קניות בסופר, בילויים, חשמל, מים וכו')</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="הוצאות הצריכה נדרשות עבור חישוב גובה המע''מ החודשי"> ? </button>
+          <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">הוצאות הצריכה נדרשות עבור חישוב גובה המע''מ החודשי</span>
+          </button>
           <input id="expanses" name="expanses" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
 
         <!-- Car  -->
         <div class="form-group">
           <label for="car">:(ביום הקניה) הכנס שווי רכב</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="משווי הרכב נגזרים מע''מ ומס רכב"> ? </button>
+          <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">משווי הרכב נגזרים מע''מ ומס רכב</span>
+          </button>
           <input id="car" name="car" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
         
         <!-- Gasoline   -->
         <div class="form-group">
           <label for="gasoline">:הכנס הוצאות דלק חודשיות</label>
-          <button type="button" class="tooltip-btn" data-toggle="tooltip" data-placement="top" title="מהוצאות הדלק החודשיות נגזרים מע''מ ומס בלו"> ? </button>
+          <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">מהוצאות הדלק החודשיות נגזרים מע''מ ומס בלו</span>
+          </button>
           <input id="gasoline" name="gasoline" type="number" class="form-control" min="0" max="100000"  placeholder="" required>
         </div>
 
