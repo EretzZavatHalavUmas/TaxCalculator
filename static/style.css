@@ -374,23 +374,11 @@ input:disabled {
   z-index: 1;
   bottom: 0%;
   right: 150%;
-  margin-right: 10px;
+  margin-right: 0px;
 
   /* Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;
-}
-
-/* Tooltip arrow */
-.tooltip-btn .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--primary) transparent transparent transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
