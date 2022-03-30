@@ -386,3 +386,92 @@ input:disabled {
   visibility: visible;
   opacity: 1;
 }
+
+/* Links Categories */
+
+#links-categories .categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+#links-categories .categories-container .card {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+#links-categories .categories-container .card h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#links-categoriess .categories-container .card:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 20px #00000076;
+    border-radius: 15px;
+    transition: all 0.6s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card.web-development {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    line-height: normal;
+    padding: 0.5rem 0.7rem;
+    border-radius: 15px;
+    margin: 0.5rem 0;
+}
+
+.category-healthcare {
+    background: #43a3f7;
+}
+.category-finance {
+    background: #ababab;
+}
+.category-hardware {
+    background: #920018;
+}
+.category-software {
+    background: #009cff;
+}
+.category-cyber {
+    background: #00d9ff;
+}
+.category-engineering {
+    background: #fcf421;
+    color: #333;
+    border: 1px solid #e1e1e1;
+}
+.category-weddings {
+    border: 1px solid #777;
+    color: #777;
+}
+.category-web-development {
+    background: #333;
+}
+.category-fashion {
+    background: #f19ef5;
+}
+.category-design {
+    background: #f501d1;
+}
+.category-transportation {
+    background: #2bcd33;
+}
