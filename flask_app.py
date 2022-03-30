@@ -187,6 +187,10 @@ def index():
 def terms():
     return render_template("terms.html")
 
+@app.route("/links")
+def links():
+    return render_template("links.html")
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == 'POST':
