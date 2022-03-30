@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-216106104-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-216106104-1');
+	</script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +29,7 @@
             <li><a href="/">דף הבית</a></li>
             <li><a href="/calc">מחשבון מיסים</a></li>
             <li><a href="/contact">צור-קשר</a></li>
-            <li><a href="/about" class="current">אודות</a></li>
+            <li><a href="/about">אודות</a></li>
         </ul>
     </nav>
 
@@ -29,19 +39,20 @@
             <div class="hero-content">
                 <h1>תנאי השימוש</h1>  <!-- class="heading-l" -->
 
-                <p>
-                    Google Analytics באתר מוטמע שירות <br>
-                    לניתוח דפוסי השימוש ומיצוב האתר במנועי חיפוש<br>
-                    קוד זה חושף בפני מפעילי השירות מידע בנוגע להתנהגות המשתמשים<br>
-                    .<a href="https://support.google.com/analytics/answer/6004245?hl=iw">קראו כאן</a> על מדיניות הפרטיות של השירות
+                <p style="direction:rtl; text-align:start">
+                     עשינו כל שבידינו על מנת לוודא את איכות המידע והמחשבון שמוצג באתר. המידע שבאתר אינם בבחינת המלצה לביצוע, חוות דעת או ייעוץ. איננו אחראים על כל נזק שיגרם למשתמש באתר או לצד שלישי כלשהו. האחריות על השימוש במידע ובמחשבון המוצג באתר היא על המשתמש בלבד.<br>
+                    ישנם מיסים נוספים שלא נכללו בחישוב כגון - מס רווחי הון, מס קניית דירה וכדומה.
                 </p>
 
                 <p style="direction:rtl; text-align:start">
-                     קבוצת שקל עשתה כל שבידיה על מנת לוודא את איכות המידע והמחשבונים המוצגים באתר. המידע והמחשבונים שבאתר אינם בבחינת המלצה לביצוע. החברה אינה אחראית על כל נזק שיגרם למשתמש באתר או לצד שלישי כלשהו. האחריות על השימוש במידע והמחשבונים המוצגים באתר היא על המשתמש בלבד. קבוצת שקל אחראית ליעוץ הניתן ישירות ע"י עובדיה ומנהליה המוסמכים לכך בלבד.
+                    באתר מוטמע שירות Google Analytics
+                    לניתוח דפוסי השימוש ומיצוב האתר במנועי חיפוש
+                    קוד זה חושף בפני מפעילי השירות מידע בנוגע להתנהגות המשתמשים
+                    ,<a href="https://support.google.com/analytics/answer/6004245?hl=iw">קראו כאן</a> על מדיניות הפרטיות של השירות.
                 </p>
 
                 <p>
-
+                    .בשימוש במחשבון המשתמש מביע את הסכמתו שהנתונים שאותם הוא מזין ישמרו במאגר מידע
                 </p>
                 <a href="/calc" class="btn">המשך למחשבון</a>
             </div>
@@ -51,7 +62,8 @@
     <!-- Footer -->
     <footer id="footer" class="bg-dark pv-s">
         <div class="container">
-            Copyright &copy; 2022, Eretz zavat halav umas
+            Copyright &copy; 2022, Eretz zavat halav umas<br>
+            <a href="/terms">תנאי השימוש</a>
         </div>
     </footer>
 </body>

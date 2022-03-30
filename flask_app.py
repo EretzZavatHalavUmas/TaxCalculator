@@ -183,6 +183,9 @@ def about():
 def index():
     return render_template("index.html")
 
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
