@@ -51,7 +51,7 @@
           <button type="button" class="tooltip-btn">?
               <span class="tooltiptext">מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות</span>
           </button>
-          <input id="salary" name="salary" type="number"  class="form-control" min="0" max="150000" step=0.01 placeholder="" required>
+          <input id="salary" name="salary" type="number"  class="form-control" min="0" max="150000" step=1 placeholder="" required>
         </div>
         
         <!-- Nekudot zhut -->
@@ -66,7 +66,7 @@
         <!-- option for second person-->
         <div class="form-group">
             <label for="checkbox1" style="display:inline">סמן כדי להכניס משכורת נוספת</label>
-            <input type="checkbox" id="checkbox1" style="width:20px; height:20px"
+            <input type="checkbox" id="checkbox1" style="width:20px; height:20px; vertical-align: middle;"
                    onclick="myFunction()"/>
         </div>
 
@@ -77,7 +77,7 @@
               <button type="button" class="tooltip-btn">?
                 <span class="tooltiptext">מהמשכורת החודשית מחושב מס הכנסה, ביטוח לאומי וביטוח בריאות</span>
               </button>
-              <input id="salary2" name="salary2" type="number"  class="form-control" min="0" max="150000" step=0.01 placeholder="" required disabled>
+              <input id="salary2" name="salary2" type="number"  class="form-control" min="0" max="150000" step=1 placeholder="" required disabled>
             </div>
 
             <!-- Nekudot zhut 2-->
@@ -86,17 +86,17 @@
               <button type="button" class="tooltip-btn"> ?
                 <span class="tooltiptext">לטובת חישוב מס ההכנסה לאחר קיזוז נקודות הזכות</span>
               </button>
-              <input id="nz2" name="nz2" type="number" class="form-control" min="2.25" max="15.00" step=0.25 placeholder="" value="2.25" required disabled>
+              <input id="nz2" name="nz2" type="number" class="form-control" min="2.25" max="15.00" step="0.25" placeholder="" value="2.25" required disabled>
             </div>
         </div>
 
         <!-- Rent -->
         <div class="form-group">
           <label for="rent">: הכנס שכירות חודשית</label>
-          <button type="button" class="tooltip-btn"> ?
-            <span class="tooltiptext">???</span>
+          <!-- <button type="button" class="tooltip-btn"> ?
+            <span class="tooltiptext">???</span> -->
           </button>
-          <input id="rent" name="rent" type="number" class="form-control" min="0" max="100000" step=0.01 placeholder="" required>
+          <input id="rent" name="rent" type="number" class="form-control" min="0" max="100000" step=1 placeholder="" required>
         </div>
 
         <!-- Arnona -->
@@ -105,7 +105,7 @@
           <button type="button" class="tooltip-btn"> ?
             <span class="tooltiptext">הארנונה החודשית מחושבת כמיסים עירוניים</span>
           </button>
-          <input id="arnona" name="arnona" type="number" class="form-control" min="0" max="100000" step=0.01 placeholder="" required>
+          <input id="arnona" name="arnona" type="number" class="form-control" min="0" max="100000" step=1 placeholder="" required>
         </div>
 
         <!-- Expanses  -->
@@ -114,7 +114,7 @@
           <button type="button" class="tooltip-btn"> ?
             <span class="tooltiptext">הוצאות הצריכה נדרשות עבור חישוב גובה המע''מ החודשי</span>
           </button>
-          <input id="expanses" name="expanses" type="number" class="form-control" min="0" max="100000" step=0.01 placeholder="" required>
+          <input id="expanses" name="expanses" type="number" class="form-control" min="0" max="100000" step=1 placeholder="" required>
         </div>
 
         <!-- Car  -->
@@ -123,13 +123,13 @@
           <button type="button" class="tooltip-btn"> ?
             <span class="tooltiptext">משווי הרכב נגזרים מע''מ ומס רכב</span>
           </button>
-          <input id="car" name="car" type="number" class="form-control" min="0" max="1000000" step=0.01 placeholder="" required>
+          <input id="car" name="car" type="number" class="form-control" min="0" max="1000000" step=1 placeholder="" required>
         </div>
           
         <!-- option for second car-->
         <div class="form-group">
-            <label for="checkbox2" style="display:inline">סמן כדי להכניס רכב נוסף</label>
-            <input type="checkbox" id="checkbox2" style="width:20px; height:20px"
+            <label for="checkbox2" style="display:inline;">סמן כדי להכניס רכב נוסף</label>
+            <input type="checkbox" id="checkbox2" style="width:20px; height:20px; vertical-align: middle;"
                    onclick="myFunction2()"/>
         </div>
 
@@ -140,7 +140,7 @@
               <button type="button" class="tooltip-btn">?
                 <span class="tooltiptext">משווי הרכב נגזרים מע''מ ומס רכב</span>
               </button>
-              <input id="car2" name="car2" type="number"  class="form-control" min="0" max="1000000" step=0.01 placeholder="" required disabled>
+              <input id="car2" name="car2" type="number"  class="form-control" min="0" max="1000000" step=1 placeholder="" required disabled>
             </div>
         </div>
         
@@ -150,11 +150,15 @@
           <button type="button" class="tooltip-btn"> ?
             <span class="tooltiptext">מהוצאות הדלק החודשיות נגזרים מע''מ ומס בלו</span>
           </button>
-          <input id="gasoline" name="gasoline" type="number" class="form-control" min="0" max="100000" step=0.01 placeholder="" required>
+          <input id="gasoline" name="gasoline" type="number" class="form-control" min="0" max="100000" step=1 placeholder="" required>
         </div>
 
         <p>
           <b> חישובי המס הינם מקורבים, יתכנו אי דיוקים ויש לקחת זאת בחשבון</b>
+        <div class="form-group">
+            <label for="agree" style="display:inline">אני מסכימ\ה לתנאי השימוש</label>
+            <input type="checkbox" id="agree" style="width:20px; height:20px; vertical-align: middle;" required>
+        </div>
         </p>
 
         <!-- <button type="submit" class="btn">חשב</button> -->
