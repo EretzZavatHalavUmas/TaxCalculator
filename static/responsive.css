@@ -17,11 +17,15 @@
     #navbar ul li a {
         padding: 5px 5px;
     }
+
+#links_button{
+    width:60%;
+    }
 }
 
 @media (max-width: 650px) {
     #hero .hero-content {
-        padding-top: 60px;
+        padding-top: 20px;
     }
 
     #contact-form input, #contact-form textarea {
@@ -52,6 +56,19 @@
         float: none;
         width: unset;
     }
+
+    /* Tooltip text */
+.tooltip-btn .tooltiptext {
+
+      /* Position the tooltip text */
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      margin-right: 0px;
+
+    }
+
 }
 
 @media (max-width: 680px) {

@@ -334,6 +334,7 @@ input:disabled {
     width: auto;
 }
 /*Pie charts*/
+/*
 .float-child {
     height: 60%;
     width: 60%;
@@ -341,6 +342,21 @@ input:disabled {
     margin: auto;
 }
 
+*/
+#piehcart{
+    display: block;
+    margin: 0 auto;
+    align='center';
+    }
+/*
+#chart_wrap{
+    border:1px solid gray;
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow:hidden;
+    }
+*/
 /*tooltip*/
 
 .tooltip-btn{
@@ -475,3 +491,8 @@ input:disabled {
 .category-transportation {
     background: #2bcd33;
 }
+
+/* links_button */
+#links_button{
+    width:25%;
+    }
