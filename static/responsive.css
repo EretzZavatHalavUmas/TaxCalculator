@@ -1,0 +1,128 @@
+@media (max-width: 450px) {
+    #navbar h1 {
+        float: none;
+        text-align: start;
+        font-size: 1rem;
+    }
+    #navbar ul {
+        float: none;
+    }
+    #navbar ul li {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #navbar ul li a {
+        padding: 5px 5px;
+    }
+
+#links_button{
+    width:60%;
+    }
+}
+
+@media (max-width: 650px) {
+    #hero .hero-content {
+        padding-top: 20px;
+    }
+
+    #contact-form input, #contact-form textarea {
+    width: 65%;
+    height: 40px;
+    }
+
+    #contact-text {
+    width: 80%;
+    }
+
+    #contact-form{
+        height: auto;
+        padding: 0px;
+    }
+
+    #hero{
+        height: auto;
+    }
+
+    #hero .hero-content h1 {
+        font-size: 40px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    #contact-info .box {
+        float: none;
+        width: unset;
+    }
+
+    /* Tooltip text */
+.tooltip-btn .tooltiptext {
+
+      /* Position the tooltip text */
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      margin-right: 0px;
+
+    }
+
+}
+
+@media (max-width: 680px) {
+    .float-child {
+        width: 450px;
+        padding: 10px;
+        margin: auto;
+    }
+
+    #home-experience {
+        height: 350px;
+    }
+
+    #home-experience .experience-img {
+        display: none;
+    }
+
+    #home-experience .experience-content {
+        float: none;
+        width: unset;
+    }
+
+    #Under-construction {
+    height: 500px;
+    }
+
+    #contact-box{
+        width: 75%;
+    }
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#links-categories .categories-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 720px) {
+    #hero .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    #links-categories .categories-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card.web-development {
+        grid-column: span 1;
+        grid-row: unset;
+    }
