@@ -26,6 +26,7 @@
 
     #contact-form input, #contact-form textarea {
     width: 65%;
+    height: 40px;
     }
 
     #contact-text {
