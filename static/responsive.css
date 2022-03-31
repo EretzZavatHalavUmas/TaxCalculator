@@ -38,7 +38,7 @@
     }
 
     #hero{
-        height: 600px;
+        height: auto;
     }
 
     #hero .hero-content h1 {
@@ -88,3 +88,23 @@
         align-items: center;
     }
 }
+
+#links-categories .categories-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 720px) {
+    #hero .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    #links-categories .categories-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card.web-development {
+        grid-column: span 1;
+        grid-row: unset;
+    }

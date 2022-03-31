@@ -147,10 +147,9 @@ h4 {
 
 /* Hero Image */
 #hero {
-    background: url('/static/images/Money.jpg') no-repeat center 35% / cover;
+    background: url('/static/images/Money op0.4.png') no-repeat center 35% / cover;
     height: 800px;
 }
-
 #hero .hero-content {
     color: var(--primary);
     text-align: center;
@@ -404,7 +403,7 @@ input:disabled {
 
 #links-categories .categories-container .card h3 {
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem;
 }
 
 #links-categoriess .categories-container .card:nth-child(even) {
@@ -437,6 +436,7 @@ input:disabled {
     padding: 0.5rem 0.7rem;
     border-radius: 15px;
     margin: 0.5rem 0;
+
 }
 
 .category-healthcare {
