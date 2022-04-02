@@ -115,7 +115,7 @@ def success():
         if(car2):
             carTax += carTaxCalc(car2)
 
-        totalExpanseTax = vat+gasTax+carTax+arnona
+        totalExpanseTax = vat+gasTax+carTax+arnona/2
         totalDirectTax = mh+bl+bb
         totalTax = totalDirectTax + totalExpanseTax
         totalDirectTaxPer = totalDirectTax/(totalSalary)*100
@@ -162,7 +162,7 @@ def success():
                                       ['מע"מ', round(vat)],
                                       ['מס בלו', round(gasTax)],
                                       ['מס על רכב', round(carTax)],
-                                      ['ארנונה', round(arnona)]
+                                      ['ארנונה', round(arnona)/2]
                                       ],
                                DATA3=[['Category', 'ILS'],
                                       ['מס הכנסה', round(mh)],
